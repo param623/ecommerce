@@ -1,0 +1,34 @@
+<div class="container">
+    <div>
+        <p class="text-right"> Price </p>
+        <hr>
+    </div>
+
+    <div class="mb-3" *ngFor="let product of checkout_products">
+        <div class="row">
+            <div class="col-4 mb-3">
+                <img src="{{ product.thumbnail }}" alt="" class="checkout-img">
+            </div>
+            <div class="col-6">
+                <p class="font-18-700"> {{ product.title }} </p>
+                <p class="stock-color"> In stock </p>
+                <div class="d-flex mb-3">
+                    <button class="mr-2 btn" (click)="deleteProduct(product)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+                <div class="quantity">
+                    <div>
+                        <button class="minus mr-2" (click)="chkQuantity(product, 'minus')"> - </button>
+                        <span> {{ product.selectedQuantity }} </span>
+                        <button class="plus ml-2" (click)="chkQuantity(product, 'add')"> + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 text-right">
+                <p class="font-18-700"> ₹ {{ product.price }} </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

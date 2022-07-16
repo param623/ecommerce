@@ -1,0 +1,19 @@
+<div class="main-header">
+    <div class="header-1 px-3">
+        <div class="row pt-3">
+            <div class="col-3 text-left cursor" (click)="landingPage()">
+                <a class="navbar-brand" routerLink="/" style="color: white;">E-Commerce</a>
+            </div>
+            <div class="col-6">
+                <input type="text" name="searchValue" id="" class="w-100 searchBar" [(ngModel)]="searchValue">
+                <mat-icon class="search-icon" (click)="filterProducts()">search</mat-icon>
+            </div>
+            <div class="col-3 my-auto cursor text-right" (click)="cartPage()" style="z-index: 5;">
+                <mat-icon style="color: white;vertical-align: bottom;">add_shopping_cart</mat-icon>
+                <span class="cartItem font-18-500" style="color: white;">
+                    {{ _shoppingCartItemsService.getCartLength() }} 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container header-padding">
+    <div class="products">
+        <div class="d-flex flex-wrap justify-content-between pl-3">
+            <div class="card mb-5 p-4 mr-5 cursor" (click)="productDetail(product)" style="width: 18rem;"
+                *ngFor="let product of products; let j = index;">
+                <!-- <img src="{{product.thumbnail}}" class="card-img-top product-img" alt="..."
+                    > -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item" *ngFor="let image of product.images; let k = index;"
+                            [ngClass]="k == 0 ? 'active' : '' ">
+                            <img class="d-block w-100 card-img-top product-img" src="{{ image }}" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="font-18-500 text-center"> {{ product.title }} </h5>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="btn btn-primary">₹ {{ product.price }} </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

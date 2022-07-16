@@ -1,0 +1,24 @@
+.sub-images {
+  border: 1px solid #ccc;
+  width: 60px;
+  height: 60px;
+}
+.sub-images img {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+}
+.main-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
+.grey-text {
+  color: #565959;
+}
+.red-text {
+  color: #b12740;
+}
+.product-detail {
+  min-height: 100vh;
+}

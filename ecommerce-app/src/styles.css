@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.font-18-400 {
+  font: normal normal normal 18px/22px Roboto;
+}
+
+.font-18-500 {
+  font: normal normal 500 18px/22px Roboto;
+}
+
+.font-18-700 {
+  font: normal normal 700 18px/22px Roboto;
+}
+
+.font-16-400 {
+  font: normal normal normal 16px/20px Roboto;
+}
+
+.font-16-500 {
+  font: normal normal 500 16px/20px Roboto;
+}
+
+.font-16-700 {
+  font: normal normal 700 16px/20px Roboto;
+}
+
+.stock-color {
+  color: #007600;
+}
+
+.header-padding {
+  padding-top: 115px !important;
+}

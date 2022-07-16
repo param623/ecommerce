@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="container checkout header-padding">
+    <div class="back my-5">
+        <button class="btn btn-secondary" (click)="back()"> Back </button>
+    </div>
+    <div class="d-flex">
+        <div class="checkout_left mr-3">
+            <div class="checkout-empty" *ngIf="_shoppingCartItemsService.getCartLength() == 0">
+                <h2 class="font-18-500">Your shopping basket is Empty.</h2>
+                <p class="font-18-400">You have no items in your basket.</p>
+            </div>
+            <div class="checkout-not-empty" *ngIf="_shoppingCartItemsService.getCartLength() != 0">
+                <p class="font-18-700"> Shopping Cart </p>
+                <app-checkout-product [checkout_products]="cartItems"></app-checkout-product>
+            </div>
+        </div>
+        <div class="checkout_right mt-4" *ngIf="_shoppingCartItemsService.getCartLength() != 0">
+            <div class="card p-3">
+                <div class="card-body">
+                    <div>
+                        <span class="font-18-400">Subtotal({{ _shoppingCartItemsService.getCartLength()}} items):</span>
+                        <span class="font-18-700"> ₹ {{ total }} </span>
+                    </div>
+                </div>
+                <div>
+                    <label for=""> Selecte Shipping Method </label>
+                    <select class="w-100 pt-3" #selectMethod (change)="updateValue(selectMethod.value)">
+                        <option [value] = "method.price" *ngFor="let method of shippingMethods"> {{ method.name }} </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container pb-5 header-padding product-detail">
+    <div class="back my-5 ">
+        <button class="btn btn-secondary" (click)="back()"> Back </button>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+            <div class="d-flex flex-column">
+                <div *ngFor ="let img of selectedProduct.images;let i = index;" class="sub-images mb-2" (mouseenter)="onHoverImage(img)">
+                    <img src="{{ img }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="main-image">
+                <img [src]="currentImage" alt="">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="d-flex flex-column">
+                <p class="font-18-400">  {{ selectedProduct.title }} - {{ selectedProduct.description }} </p>
+                <p>
+                    <span class="grey-text font-16-400"> M.R.P.: </span>
+                    <span class="red-text font-16-400" style="text-decoration:line-through;"> ₹ {{ currentMRP }} </span>
+                </p>
+                <p>
+                    <span class="grey-text font-16-400"> Deal Price: </span>
+                    <span class="red-text font-16-500"> ₹ {{ selectedProduct.price }} </span>
+                </p>
+                <p>
+                    <span class="grey-text font-16-400"> You Save: </span>
+                    <span class="red-text font-16-400"> ₹ {{ discountPrice }}  {{ "( " + selectedProduct.discountPercentage + "% )" }} </span>
+                </p>
+                <p>
+                    <button class="btn btn-primary w-25" (click)="addToCart()">Add to Cart</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
