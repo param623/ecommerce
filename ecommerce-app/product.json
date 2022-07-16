@@ -175,14 +175,17 @@
 
     "shippingMethods" : [
         {
+            "id":1,
             "name": "Ship Rocket",
             "price": 100
         },
         {
+            "id":2,
             "name": "Delhivery",
             "price": 150
         },
         {
+            "id":3,
             "name": "Blue Dart",
             "price": 200
         }

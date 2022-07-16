@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <div>
                         <span class="font-18-400">Subtotal({{ _shoppingCartItemsService.getCartLength()}} items):</span>
-                        <span class="font-18-700"> ₹ {{ total }} </span>
+                        <span class="font-18-700"> ₹ {{ _shoppingCartItemsService.getTotal() + shippingCost }} </span>
                     </div>
                 </div>
                 <div>

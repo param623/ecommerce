@@ -11,7 +11,7 @@ export class CheckoutComponent implements OnInit {
   cartItems: any = [];
   shippingMethods: any = [];
   selectedShippingMethod: any = []
-  total: number = 0
+  shippingCost: number = 0
   constructor(
     public _shoppingCartItemsService: ShoppingCartItemsService,
     private _route: Router
@@ -20,7 +20,7 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.getItems();
     this.getShippingMethods();
-    this.total = this._shoppingCartItemsService.getTotal();
+    
   }
 
   getItems() {
@@ -36,8 +36,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   updateValue(value: string) {
-    this.total = this._shoppingCartItemsService.getTotal();
-    this.total += +value;
+    this.shippingCost = +value;
   }
 
   back() {
