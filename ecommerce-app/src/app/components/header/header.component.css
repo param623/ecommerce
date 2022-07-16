@@ -13,14 +13,13 @@
 }
 .search-icon {
     position: absolute;
-    margin-left: -25px;
-    background-color: #febd69;
-    height: 38px;
+    background-color: #eaeded;
+    height: 36px;
     width: 45px;
     line-height: 39px;
-    margin-top: 1px;
+    margin-top: 2px;
     text-align: center;
-    margin-left: -45px;
+    margin-left: -46px;
     border-radius: 0px 4px 4px 0px;
 }
 .small {
